@@ -7,7 +7,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Hongjae Kim
-  tagline: Developer
+  tagline: NHN 루키여우TF
   date_format: '%b %-d, %Y'
   
   social_links:
@@ -25,3 +25,5 @@ theme: plainwhite
 plugins:
   - jekyll-seo-tag
 remote_theme: samarsault/plainwhite-jekyll
+disqus_shortname: hong-gohn
+url: "https://hong-gohn.github.io"

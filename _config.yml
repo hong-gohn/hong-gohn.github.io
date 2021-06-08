@@ -7,7 +7,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Hongjae Kim
-  tagline: NHN 루키여우TF
+  tagline: NHN 인프라플랫폼개발팀
   date_format: '%b %-d, %Y'
   
   social_links:

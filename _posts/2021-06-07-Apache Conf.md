@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Apache Configuration(1) - httpd.conf"
+title:  "Apache Configuration - httpd.conf"
 categories: Apache Configuration httpd.conf
 ---
-### Apache Configuration(1) - httpd.conf
+### Apache Configuration - httpd.conf
 Apache Configuration File은 다양한 종류로 나누어 저장 가능
 
 그 중 기본이자 핵심 설정 파일인 httpd.conf 파일 핵심 기능 파악해보고자 한다.
@@ -11,10 +11,10 @@ Apache Configuration File은 다양한 종류로 나누어 저장 가능
 #### httpd.conf 항목 분석
 - ServerRoot "[디렉토리 위치]": Apache 서버의 Root 디렉토리 설정
 <br>
-ex)
-```
-ServerRoot "/etc/httpd"
-```
+    ex)
+    ```
+    ServerRoot "/etc/httpd"
+    ```
 <br>
 - Keepalive [On(default)/Off]: 클라이언트의 지속적인 요청 작업들을 계속 처리하도록 허용할 것에 대한 여부 설정(성능 직접적 연관 있음)
     - maxkeppaliverequest [숫자]: Keepalive On 인 경우 최대 숫자 만큼 연결 제한
@@ -60,6 +60,11 @@ ServerRoot "/etc/httpd"
     </Directory>
     ```
 
+##### 섹션 적용 순서
+1. Directory와 .htaccess가 동시 적용. 단 Directory가 정규식표현식이 아닐때
+2. DirectoryMatch
+3. Files, FilesMatch가 동시 적용
+4. Location, LocationMatch 동시 적용
 
 추가 사항 계속 업로드 예정
 

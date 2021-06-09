@@ -42,8 +42,26 @@ ServerRoot "/etc/httpd"
     ServerName hong.blog.com
     </VirtualHost>
     ```
+- &lt;Directory "[위치]"&gt; ~ &lt;/Directory&gt; : 서버 일부분에만 적용되게 하기 위해서 해당 블록들을 사용 VirtualHost와 거의 비슷
+- Files 섹션 : 해당 파일에 대한 접근 허용 및 거부가 가능.
+    ```
+    ex) private.html 에 해당하는 접근 거부
+    <Files private.html>
+    Order allow,deny
+    Deny from all
+    </Files>
+
+    이런 식으로 directory와 결합하여 사용하여 특정 위치의 파일에 한해서 접근 거부 가능.
+    <Directory /var/web/dir1>
+        <Files private.html>
+        Order allow,deny
+        Deny from all
+        </Files>
+    </Directory>
+    ```
+
 
 추가 사항 계속 업로드 예정
 
 ### 참조
-https://httpd.apache.org/docs/2.4/sections.html
+https://httpd.apache.org/docs/2.4/en/

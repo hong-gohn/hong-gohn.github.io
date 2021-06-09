@@ -24,7 +24,7 @@ ServerRoot "/etc/httpd"
 - LoadModule [${ServerRoot}/modules]: 모듈 읽어들이고 사용가능 모듈 추가.
 - Include [설정파일]: Apache 설정 파일 (vhost, ssl 등) 분산되어있는 설정파일을 로드 할 수 있도록 한다.
 - Directoryindex [파일1, 파일2, ...]: 웹 디렉토리 접근 시 인식되는 파일 순서
-- &gt;VirtualHost&lt; ~ &gt;/VirtualHost&lt; : 여러 주소와 포트에 대해 다른 행동을 지정할 수 있도록 설정 가능
+- &lt;VirtualHost&gt; ~ &lt;/VirtualHost&gt; : 여러 주소와 포트에 대해 다른 행동을 지정할 수 있도록 설정 가능
     ```
     80포트 - http
     443포트 - https
